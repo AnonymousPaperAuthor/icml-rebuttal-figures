@@ -1,6 +1,6 @@
 # Eligibility Task: Ministral, Unstructured Natural-Language Output
 
-This page documents an additional rebuttal analysis on the eligibility task using `Ministral 3 8B Reasoning`, where the model is allowed to respond in natural language rather than the rigid field-by-field format used in the main structured eligibility experiment.
+This page documents an additional rebuttal analysis on the eligibility task using `Ministral 3 8B Reasoning`, where the model is allowed to respond in natural language rather than the rigid field-by-field format used in the main structured experiment.
 
 ## Why This Analysis Was Added
 
