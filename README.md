@@ -11,12 +11,15 @@ It includes:
 An example eligibility question is available here:
 - [Eligibility Example Question](examples/eligibility_example_question.md)
 
+Additional note for the unstructured natural-language eligibility analysis:
+- [Eligibility Task: Ministral, Unstructured Natural-Language Output](eligibility_unstructured_ministral.md)
+
 ## Boolean: Qwen2.5-14B-Instruct
 
 Task metadata:
 - Task: Boolean tree
 - Model: `Qwen2.5-14B-Instruct`
-- Prompt used in this run: `strict_format_cot_prompt`
+- Prompt used in this run: standard prompt
 - Capacity layer shown: `26`
 
 | Full Capacity Traces | Aligned Capacity Traces |
@@ -32,7 +35,7 @@ Download:
 Task metadata:
 - Task: Boolean tree
 - Model: `gpt-oss-20b`
-- Prompt used in this run: `strict_format_cot_prompt`
+- Prompt used in this run: standard prompt
 - Capacity layer shown: `13`
 
 | Full Capacity Traces | Aligned Capacity Traces |
