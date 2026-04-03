@@ -8,8 +8,6 @@ One of the review concerns was that the original Boolean result might depend on 
 - a fixed binary-tree problem structure, and
 - a rigid structured-CoT output format.
 
-We had already added the eligibility task to address the first point. This additional analysis addresses the second point by changing the model's output format while keeping the underlying task generation process fixed.
-
 ## How The Eligibility Tasks Are Generated
 
 A typical example gives the model a short applicant paragraph in ordinary prose and a set of eligibility rules. For instance, the paragraph may say that an applicant is 41 years old, earns `$63,000`, has a credit score of `730`, and has `$29,500` in savings, while the rules ask whether the applicant meets age, income, credit-score, and savings requirements, plus two combined requirements and a final eligible / not-eligible decision.
