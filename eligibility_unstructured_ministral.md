@@ -14,9 +14,6 @@ That script first decides what the correct local and final outcomes should be fo
 For a concrete example input, see:
 - [Eligibility Example Question](examples/eligibility_example_question.md)
 
-For a concrete example Ministral response in the unstructured setting, see:
-- [Eligibility Example Response (Ministral)](examples/eligibility_example_response_ministral.md)
-
 ## Unstructured Output
 
 Here, the model is not asked to produce the rigid structured template used in the main analysis.
@@ -35,9 +32,7 @@ Instead:
   - `Final answer: ...`
   - `Violated criteria: ...`
 
-For analysis, we sample line-internal anchors rather than rigid template tokens. Specifically, we choose five evenly spaced word-end anchors within each reasoning line, and for plotting we omit the first of those five anchors because it was dominated by stereotyped line-opening words and line-boundary effects.
-
-This leaves four plotted anchors per reasoning line.
+For analysis, we sample line-internal anchors rather than rigid template tokens. Specifically, within each reasoning line, we choose a few evenly spaced word-end anchors at which the capacities will be computed.
 
 ## Example Ministral Response
 
