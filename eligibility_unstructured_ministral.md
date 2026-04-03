@@ -2,13 +2,7 @@
 
 This page documents an additional rebuttal analysis on the eligibility task using `Ministral 3 8B Reasoning`, where the model is allowed to respond in natural language rather than the rigid field-by-field format used in the main structured experiment.
 
-## Why This Analysis Was Added
-
-One of the review concerns was that the original Boolean result might depend on a narrow combination of:
-- a fixed binary-tree problem structure, and
-- a rigid structured-CoT output format.
-
-## How The Eligibility Tasks Are Generated
+## Eligibility Task Generation
 
 A typical example gives the model a short applicant paragraph in ordinary prose and a set of eligibility rules. For instance, the paragraph may say that an applicant is 41 years old, earns `$63,000`, has a credit score of `730`, and has `$29,500` in savings, while the rules ask whether the applicant meets age, income, credit-score, and savings requirements, plus two combined requirements and a final eligible / not-eligible decision.
 
