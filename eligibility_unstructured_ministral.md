@@ -27,9 +27,9 @@ For a concrete example input, see:
 For a concrete example Ministral response in the unstructured setting, see:
 - [Eligibility Example Response (Ministral)](examples/eligibility_example_response_ministral.md)
 
-## Unstructured Output Variant
+## Unstructured Output
 
-In this variant, the model is not asked to produce the rigid structured template used in the main eligibility analysis.
+Here, the model is not asked to produce the rigid structured template used in the main eligibility analysis.
 
 Instead:
 - each reasoning line begins only with the item ID:
@@ -65,44 +65,3 @@ Final: Since both G1 and G2 are met, the applicant is eligible.
 Final answer: Eligible
 Violated criteria: none
 ```
-
-## Figures
-
-Task metadata:
-- Task: Eligibility assessment
-- Model: `Ministral 3 8B Reasoning`
-- Output format: unstructured natural-language lines with lightweight ID prefixes
-- Capacity layer shown: `20`
-
-| Full Capacity Traces | Aligned Capacity Traces |
-| --- | --- |
-| <img src="figures/eligibility_ministral_unstructured/full_traces.png" alt="Ministral eligibility unstructured full capacity traces" width="100%"> | <img src="figures/eligibility_ministral_unstructured/aligned_traces.png" alt="Ministral eligibility unstructured aligned capacity traces" width="100%"> |
-
-Download:
-- [Full traces PDF](figures/eligibility_ministral_unstructured/full_traces.pdf)
-- [Aligned traces PDF](figures/eligibility_ministral_unstructured/aligned_traces.pdf)
-
-## Main Observations
-
-The main qualitative result is conserved:
-- we still observe dynamic, node-specific manifold pulses in the natural-language task
-- during the solve phase, each node's capacity rises when that subproblem is being worked on
-- during recall, child-node capacity rises again while the parent node is being resolved
-
-Compared with the structured eligibility figures, the overall capacity is more elevated across the full trace. We interpret the main result conservatively:
-- the broader elevation likely reflects the denser semantic content of natural-language lines relative to rigid formatting tokens
-- despite that broader elevation, the key dynamic pulse pattern remains visible
-
-The recall-phase result is the most important point for the rebuttal:
-- as in the structured setting, child-node capacity increases again during parent computation
-- this indicates that the central temporal pattern is not tied to the original rigid answer template
-
-## Additional Note On The First Within-Line Anchor
-
-When we initially plotted all five within-line anchors, the first anchor in each line showed unusually high capacity in both the solve- and recall-aligned plots.
-
-Inspection of the selected anchor words showed that this first anchor was usually a highly stereotyped line-opening token, such as:
-- a name or pronoun: `Brian`, `Rachel`, `He`, `She`, `His`, `Her`
-- a generic line starter: `Both`, `Since`, `The`, `Neither`
-
-We therefore excluded that first anchor from the plotted version shown here, because it appears to reflect line-start lexical regularity and boundary effects more than the substantive computation in the line body.
