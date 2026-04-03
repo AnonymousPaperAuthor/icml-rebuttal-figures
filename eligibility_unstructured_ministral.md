@@ -19,7 +19,7 @@ For a concrete example Ministral response in the unstructured setting, see:
 
 ## Unstructured Output
 
-Here, the model is not asked to produce the rigid structured template used in the main eligibility analysis.
+Here, the model is not asked to produce the rigid structured template used in the main analysis.
 
 Instead:
 - each reasoning line begins only with the item ID:
